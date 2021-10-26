@@ -1,0 +1,179 @@
+% DOCUMENT HEADER
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\usepackage{amsfonts}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{gensymb}
+\usepackage{amsmath}
+
+% TITLE
+\title{\textbf{Question 9}}
+\author{\textit{Michal Špano}}
+\date{}
+
+\graphicspath{{Images/}}
+
+% Page header
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{MAT, 5th grade}
+\lhead{Tangent function}
+\rfoot{Page \thepage}
+
+\begin{document}
+
+\maketitle
+
+% SECTION 1
+\section{Definition}
+To define the $tangent$ function, one must understand the basic principles of deriving $sine$ and $cosine$ using a so-called \textbf{unit circle}.
+
+A \textbf{unit circle} is the circle of radius 1 centred at the origin $O(0, 0)$ in the \textbf{Cartesian coordinate system}.
+
+% Include a picture of a unit circle
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=10cm]{unit-circle.png}
+    \caption{Unit circle}
+\end{figure}
+
+Then for a point $A = [x, y]$ moved along the circumference $k$ by an angle $\theta$ is valid:\\ 
+\[  
+A = \left[ cos(\theta), sin(\theta) \right]
+\]
+
+A right-angled triangle consists of a \textbf{hypotenuse} (side opposing the right angle) and 2 other adjacent sides called \textbf{legs}. The definition of tangent states that it is the quotient of the opposite side and the adjacent side to a certain angle $\theta$, symbolically: 
+\[
+tan(\theta) = \frac{opposite}{adjacent}
+\]
+
+Which can be further transformed into: 
+\[
+tan(\theta) = \frac{y}{x} ... tan(\theta) = \frac{sin(\theta)}{cos(\theta)}
+\]
+
+% SECTION 2
+\section{Properties}
+
+Now, let's address the properties of $f:y=tan(x)$
+
+\textbf{Graph: }
+
+% GENERAL GRAPH
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=8cm]{tan.png}
+    \caption{$y=tan(x)$}
+\end{figure}
+
+% ENUMERATED PROPERTIES
+% http://www.nabla.hr/TF-TrigFunctionsD3.htm
+\textbf{Properties: }
+\begin{enumerate}
+    % DOMAIN
+    \item \textbf{Domain}
+    \[
+    f:y=tan(x) ... y=\frac{sin(x)}{cos(x)} \Rightarrow cos(x) \neq 0
+    \]
+    
+    \begin{figure}[htp]
+        \centering
+        \includegraphics[width=10cm]{cosine.png}
+        \caption{$y=cos(x)$}
+    \end{figure}    
+    
+    \textit{$Let f:y=cos(x)$}, solve for $x\in\mathbb{R}$.
+    \[
+    x \in \Big\{ \frac{\pi}{2}; \frac{3\pi}{2} + 2k\pi, k \in\mathbb{Z} \Big\} \Leftrightarrow
+    x \in \Big\{ \frac{\pi}{2} + k\pi, k \in\mathbb{Z} \Big\}
+    \]
+    Through additional steps, we obtain the following result:
+    \[
+    x\in\{(2k+1)\frac{\pi}{2}, k\in\mathbb{Z} \}
+    \]
+    
+    In other words, the \textbf{Domain} of $y=tan(x)$ is all real numbers except every $x$ for which is $sin(x) = 0$ defined. Symbolically:
+    \[
+    D_f= \mathbb{R}-\{ (2k+1)\frac{\pi}{2}, k\in\mathbb{Z} \}
+    \]
+    
+    % Range of values
+    \item \textbf{Range of values}
+    
+    As shown in the figure above, the \textbf{Range} of $f: y=tan(x)$:
+    \[
+    H_f=\mathbb{R}
+    \]
+    
+    \item \textbf{Values in quadrants}
+    
+    \begin{center}
+    \begin{tabular}{||c c c c||} 
+    \hline
+    \textit{I.} & \textit{II.} & \textit{III} & \textit{IV} \\ [0.5ex] 
+    \hline\hline
+    $\Big(0;\frac{\pi}{2}\Big)$ & $\Big(\frac{\pi}{2};\pi\Big)$ & $\Big(\pi;\frac{3\pi}{2}\Big)$ & 
+    $\Big(\frac{3\pi}{2};2\pi\Big)$ \\
+    \hline
+    + & - & + & - \\ [1ex] 
+    \hline
+    \end{tabular}
+    \end{center}
+    
+    \item \textbf{Periodicity}
+    
+    Suppose that the $period$ of $y=tan(x)$ is $2\pi$: 
+    \[
+    tan(x + 2k\pi) = \frac{sin(x + 2k\pi)}{cos(x + 2k\pi)} = \frac{sin(x)}{cos(x)} = tan(x)
+    \]
+    However, $2\pi$ is not the smallest possible period. Let us consider a case where $period$ is $\pi$.
+    \[
+    tan(x + \pi) = \frac{sin(x +\pi)}{cos(x + \pi)} = \frac{-sin(x)}{-cos(x)} = tan(x)
+    \]
+    
+    \textbf{Explanation}: The $period$ of $f:y=sin(x)$ and $f:y=cos(x)$ is $2\pi$, any $x \in D_f$ shifted by the period of $\pi$ will produce a \textbf{function value} for which is valid: $\forall x \in D_f: f(x + \pi)=-f(x)$.
+    
+    \textbf{Conclusion}
+    Function \textbf{tangent} is \textbf{periodic} with the smallest possible period $\pi$.
+    
+    \item \textbf{Parity}
+    \[
+    f^+(x):y=tan(x)
+    \]
+    \[
+    f^-(-x):y=tan(-x) = \frac{sin(-x)}{cos(-x)} = \frac{-sin(x)}{cos(x)} = -\frac{sin(x)}{cos(x)} = -tan(x),
+    \]
+    Based on the parity of \textbf{sine} (odd), \textbf{cosine} (even) $\Rightarrow sin(-x)=-sin(x) \land cos(-x) = cos(x)$.
+    
+    $f(-x) = -f(x) \Rightarrow$ Tangent is an \textbf{odd function}.
+    
+    \item \textbf{Graph}
+    
+    \textbf{Tangentoid} is the plot of the tangent function.
+    
+    \item \textbf{Monotonicity}
+    
+    The tangent function is \textbf{increasing} on $\mathbb{R}$ between 2 consecutive vertical \textbf{asymptotes}, where every asymptote is defined as: $x=(2k + 1)\frac{\pi}{2}, k \in\mathbb{Z}$,\\that is:
+    \[
+    \forall x_{1,2}\in D_f:tan(x_1)<tan(x_2) \land x_1<x_2 
+    \]
+    
+    \item \textbf{Important function values of tangent}
+    
+    \begin{center}
+    \begin{tabular}{||c c c c c c||} 
+    \hline
+     $x: $ & $0\degree$ & $30\degree$ & $45\degree$ & $60\degree$ & $90\degree$ \\ [0.5ex] 
+     \hline
+     $tan(x): $ & 0 & $\frac{\sqrt{3}}{3}$ & 1 & $\sqrt{3}$ & $\text{\O}$ \\ [1ex] 
+     \hline
+    \end{tabular}   
+    \end{center}
+    
+\end{enumerate}
+
+\end{document}
+
