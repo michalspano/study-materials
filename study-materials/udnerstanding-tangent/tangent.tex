@@ -8,35 +8,37 @@
 \usepackage{tabularx}
 \usepackage{gensymb}
 \usepackage{amsmath}
+\usepackage{hyperref}
+
+% Set up hyperlinks
+\hypersetup{colorlinks=true,
+            linkcolor=blue,
+            urlcolor=blue}
+
 
 % TITLE
-\title{\textbf{Question 9}}
+\title{\textbf{Understanding the Tangent Function}}
 \author{\textit{Michal Špano}}
 \date{}
 
-\graphicspath{{Images/}}
+% Set up default path for pictures 
+\graphicspath{{assets/}}
 
 % Page header
 \pagestyle{fancy}
 \fancyhf{}
-\rhead{MAT, 5th grade}
+\rhead{MAT, @michalspano}
 \lhead{Tangent function}
 \rfoot{Page \thepage}
 
-\begin{document}
-
-\maketitle
-
-% SECTION 1
-\section{Definition}
-To define the $tangent$ function, one must understand the basic principles of deriving $sine$ and $cosine$ using a so-called \textbf{unit circle}.
+\begin{document}iples of deriving $sine$ and $cosine$ using a so-called \textbf{unit circle}.
 
 A \textbf{unit circle} is the circle of radius 1 centred at the origin $O(0, 0)$ in the \textbf{Cartesian coordinate system}.
 
 % Include a picture of a unit circle
 \begin{figure}[htp]
     \centering
-    \includegraphics[width=10cm]{unit-circle.png}
+    \includegraphics[width=9cm]{unit_circle.png}
     \caption{Unit circle}
 \end{figure}
 
@@ -45,7 +47,9 @@ Then for a point $A = [x, y]$ moved along the circumference $k$ by an angle $\th
 A = \left[ cos(\theta), sin(\theta) \right]
 \]
 
-A right-angled triangle consists of a \textbf{hypotenuse} (side opposing the right angle) and 2 other adjacent sides called \textbf{legs}. The definition of tangent states that it is the quotient of the opposite side and the adjacent side to a certain angle $\theta$, symbolically: 
+\textit{Note: an applet is available (\href{https://www.geogebra.org/m/gvtvjtpf}{link}) or scan its \textbf{QR code} under \textbf{Resources}}.
+
+A right-angled triangle consists of the \textbf{hypotenuse} (the side opposing the right angle) and 2 other adjacent sides called \textbf{legs}. The definition of tangent states that it is the quotient of the opposite side and the adjacent side to a certain angle $\theta$, symbolically: 
 \[
 tan(\theta) = \frac{opposite}{adjacent}
 \]
@@ -73,10 +77,11 @@ Now, let's address the properties of $f:y=tan(x)$
 % http://www.nabla.hr/TF-TrigFunctionsD3.htm
 \textbf{Properties: }
 \begin{enumerate}
+
     % DOMAIN
     \item \textbf{Domain}
     \[
-    f:y=tan(x) ... y=\frac{sin(x)}{cos(x)} \Rightarrow cos(x) \neq 0
+    f:y=tan(x) ... y=\frac{sin(x)}{cos(x)} \Leftrightarrow cos(x) \neq 0
     \]
     
     \begin{figure}[htp]
@@ -85,7 +90,7 @@ Now, let's address the properties of $f:y=tan(x)$
         \caption{$y=cos(x)$}
     \end{figure}    
     
-    \textit{$Let f:y=cos(x)$}, solve for $x\in\mathbb{R}$.
+    \textit{Let $f:y=cos(x)$}, solve for $x\in\mathbb{R}$.
     \[
     x \in \Big\{ \frac{\pi}{2}; \frac{3\pi}{2} + 2k\pi, k \in\mathbb{Z} \Big\} \Leftrightarrow
     x \in \Big\{ \frac{\pi}{2} + k\pi, k \in\mathbb{Z} \Big\}
@@ -108,6 +113,7 @@ Now, let's address the properties of $f:y=tan(x)$
     H_f=\mathbb{R}
     \]
     
+    % Values in quadrants
     \item \textbf{Values in quadrants}
     
     \begin{center}
@@ -123,6 +129,7 @@ Now, let's address the properties of $f:y=tan(x)$
     \end{tabular}
     \end{center}
     
+    % Periodicity of tangent
     \item \textbf{Periodicity}
     
     Suppose that the $period$ of $y=tan(x)$ is $2\pi$: 
@@ -134,11 +141,30 @@ Now, let's address the properties of $f:y=tan(x)$
     tan(x + \pi) = \frac{sin(x +\pi)}{cos(x + \pi)} = \frac{-sin(x)}{-cos(x)} = tan(x)
     \]
     
-    \textbf{Explanation}: The $period$ of $f:y=sin(x)$ and $f:y=cos(x)$ is $2\pi$, any $x \in D_f$ shifted by the period of $\pi$ will produce a \textbf{function value} for which is valid: $\forall x \in D_f: f(x + \pi)=-f(x)$.
+    % Include graphical depiction
+    \begin{figure}[ht!]
+        \centering
+        \vspace{-10pt}
+        \centering\includegraphics[scale=2.5]{unit_circle_tangent_proof.png}
+        \vspace{-10pt}
+        \caption{Periodicity of tangent}
+        \vspace{-10pt}
+    \end{figure}
+    
+    \textbf{Explanation}: The $period$ of $f:y=sin(x)$ and $f:y=cos(x)$ is $2\pi$, any $x \in D_f$ shifted by the period of $\pi$ will produce a \textbf{function value} for which is valid: $\forall x \in D_f \subset \mathbb{R}: f(x + \pi)=-f(x)$.
+    
+    Let $A'$ be a point shifted along the circumference $k$ by an angle $\theta$, $A'_1$ be a point shifted along the same circumference by an angle $\theta + \pi$. Their coordinates are depicted using a \textbf{unit circle} and are symmetrical through $O[0,0]$ (point symmetry). Notice: 
+    \[
+    A'_x = -A'_{x_1} \land A'_y = -A'_{y_1} 
+    \]
+    
+    \textit{Note: an applet is available (\href{https://www.geogebra.org/m/qr7hjqs6}{link}) or scan its \textbf{QR code} under \textbf{Resources}}.
     
     \textbf{Conclusion}
-    Function \textbf{tangent} is \textbf{periodic} with the smallest possible period $\pi$.
+    Function \textbf{tangent} is \textbf{periodic} with the smallest possible
+    period $\pi$.
     
+    % Parity of tangent
     \item \textbf{Parity}
     \[
     f^+(x):y=tan(x)
@@ -150,16 +176,26 @@ Now, let's address the properties of $f:y=tan(x)$
     
     $f(-x) = -f(x) \Rightarrow$ Tangent is an \textbf{odd function}.
     
-    \item \textbf{Graph}
-    
-    \textbf{Tangentoid} is the plot of the tangent function.
-    
+    % Monotonicity of tangent
     \item \textbf{Monotonicity}
     
     The tangent function is \textbf{increasing} on $\mathbb{R}$ between 2 consecutive vertical \textbf{asymptotes}, where every asymptote is defined as: $x=(2k + 1)\frac{\pi}{2}, k \in\mathbb{Z}$,\\that is:
     \[
     \forall x_{1,2}\in D_f:tan(x_1)<tan(x_2) \land x_1<x_2 
     \]
+    
+    \begin{figure}[ht!]
+        \centering
+        \vspace{-10pt}
+        \centering\includegraphics[scale=0.92]{monotony.png}
+        \vspace{-10pt}
+        \caption{Monotonicity of tangent}
+        \vspace{-10pt}
+    \end{figure}
+    
+    \item \textbf{Graph}
+    
+    \textbf{Tangentoid} is the plot of the tangent function.
     
     \item \textbf{Important function values of tangent}
     
@@ -170,10 +206,28 @@ Now, let's address the properties of $f:y=tan(x)$
      \hline
      $tan(x): $ & 0 & $\frac{\sqrt{3}}{3}$ & 1 & $\sqrt{3}$ & $\text{\O}$ \\ [1ex] 
      \hline
-    \end{tabular}   
+    \end{tabular}
+    
     \end{center}
     
 \end{enumerate}
 
+% Include scanable resources
+\section{\textbf{Resources}}
+
+\centering\includegraphics[scale=0.05]{applet1.png}
+\includegraphics[scale=0.05]{applet2.png}
+
+\centering\textit{Applet 1, Applet 2}
+
+% Plot list of figures
+\listoffigures
+
 \end{document}
 
+
+\maketitle
+
+% SECTION 1
+\section{Definition}
+To define the $tangent$ function, one must understand the basic princ
