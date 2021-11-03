@@ -1,0 +1,51 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{stix}
+
+\title{Rules of Logarithms}
+\author{Michal Špano}
+\date{November 2021}
+
+\begin{document}
+
+\maketitle
+
+% GENERAL STATEMENT
+\[\forall x,y \in\mathbf{R^+}, \forall a > 0 \land a \neq 1, \forall s \in\mathbf{R}:\]
+
+% RULES OF LOGARITHMS
+\begin{enumerate}
+    \item \textbf{Rule 1}
+    \[\log_a 1 = 0\]
+    $a^0 = 1$ ... $\log_a 1 = 0$
+    
+    \item \textbf{Rule 2}
+    \[\log_a a = 1\]
+    $a^1 = a$ ... $\log_a a = 1$
+    
+    \item \textbf{Rule 3}
+    \[a^{log_a x} = x\]
+    $\log_a x = \mathscr{l}$ ... $a^\mathscr{l} = x \Rightarrow a^{\log_a x} = x$
+    
+    \item \textbf{Rule 4}
+    \[\log_a (x.y) = \log_a x - \log_a y\]
+    $x = a^{\log_a x}, y = a^{\log_a y}$ ... $(x.y) = a^{\log_a x}.a^{\log_a y}$ ... $(x.y) = a^{\log_a x + \log_a y}$;\\ \textbf{Rule 3} $\Rightarrow \log_a (x.y) = \log_a x - \log_a y$
+    
+    \item \textbf{Rule 5}
+    \[\log_a \Big(\frac{x}{y}\Big) = \log_a x - \log_a y\]
+    $x = a^{\log_a x}, y = a^{\log_a y}$ ... $\big(\frac{x}{y}\big) = \frac{a^{\log_a x}}{a^{\log_a y}}$ ... $\big(\frac{x}{y}\big) = a^{\log_a x - \log_a y}$;\\
+    \textbf{Rule 3} $\Rightarrow \log_a \Big(\frac{x}{y}\Big) = \log_a x - \log_a y$
+    
+    \item \textbf{Rule 6}
+    \[\log_a x^s = s(\log_a x)\]
+    $x = a^{\log_a x}$ ... $x^s = \big({a^{log_a x}}\big)^s$ ... $x^s = a^{s(log_a x)}$; \textbf{Rule 3} $\Rightarrow \log_a x^s = s(\log_a x)$
+    
+    \item \textbf{Rule 7}
+    \[\log_a x = \frac{\log_b x}{\log_b a}\]
+    $x = a^{\log_a x}$ ... $\log_b x = \log_b a^{\log_a x}$; \textbf{Rule 6} $\Rightarrow \log_b a^{\log_a x} = \log_a x \big(\log_b a\big)$\\... $\log_b x = \log_a x \big(\log_b a\big)$ $/\div\big(\log_b a\big)$ $\Rightarrow \log_a x = \frac{\log_b x}{\log_b a}$
+    
+\end{enumerate}
+
+\end{document}
+
