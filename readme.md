@@ -1,16 +1,8 @@
-# Mathematics - GeoGebra Applets
+# Programming & Mathematics Study Materials
 
-[__GeoGebra__][1] applets for all passionate learners.
+<!-- TODO: Add proper readme.md -->
 
-__Source files__ can be found in `GeoGebra/` dir.
+This repositery contains a collection of study materials for __Mathematics__, __Programming__ and much more!
+___
 
-## Trapezium
-
-Click on any screenshot to access its customizable __Applet__.
-
-<a href="https://www.geogebra.org/m/pzjc6ruz">
-    <img src="docs/applet1.png">
-</a>
-
-<!-- LINKS AND REFS -->
-[1]: https://www.geogebra.org
+![demo](https://miro.medium.com/max/1400/1*7AKb9rynbkiMVV6pReqW2g.png)
