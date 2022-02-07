@@ -1,2 +1,11 @@
 # Exclude macOS bin
 *.DS_Store
+*.swp
+
+# Exclude LaTeX Workspace export
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.synctex.gz
+*.toc
