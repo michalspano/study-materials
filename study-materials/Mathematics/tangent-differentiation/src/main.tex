@@ -1,0 +1,63 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb} % Proper number set rendering
+\usepackage{mathtools}
+
+\title{Differentiating the \textbf{tangent} function}
+\author{Michal Špano}
+\date{March 2022}
+
+\begin{document}
+
+\maketitle
+
+% \section{Total area of a graph}
+% $S_T = \sum \int x f(x), x \in D(f) \subset \mathbb{R}$ - denotes the total area of the graph as $S_T$.
+
+\section{The first derivative of the tangent function}
+
+Let $f$ be $f = tan(x)$. Then differentiate $f(x)$ with the respect to $x$, such that $f'(x)$: \\
+
+$f'(x) = \Bigg [ \dfrac{sin(x)}{cos(x)} \Bigg ] ' =
+\dfrac{[sin(x)]'cos(x) - [cos(x)]'sin(x)}{cos^{2}(x)} =
+\dfrac{cos^{2}(x) + sin^{2}(x)}{cos^{2}(x)} =$ 
+$\dfrac{1}{cos^{2}(x)} = sec^{2}(x)$, $\implies f'(x)=sec^{2}(x)$, where:
+
+ $\forall x \in \mathbb{R}: sin^{2}(x) + cos^{2}(x) = 1 
+ \land \dfrac{1}{cos(x)} = sec(x) 
+ \land \dfrac{sin(x)}{cos(x)} = tan(x)$. 
+ 
+ The proposed steps are based on the principle of the \textbf{Quotient rule} (and shall be used in the consecutive sections) which states:
+\[
+f'(x) = \dfrac{P(x)}{Q(x)} = \dfrac{P'(x)Q(x)-Q'(x)P(x)}{Q^{2}(x)}.
+\]
+
+\section{The second derivative of the tangent function}
+Differentiate $f(x)$ with the respect to $x$, such that $f''(x)$: \\
+
+$f''(x) = [sec^{2}(x)]' = 
+\Big[ \dfrac{1}{cos^{2}(x)} \Big]' = 
+\dfrac{0-(-2sin(x)cos(x))}{cos^{4}(x)} = 
+\dfrac{2sin(x)cos(x)}{cos^{4}(x)} = $
+
+$2 \Bigg( \dfrac{sin(x)}{cos(x)} \dfrac{1}{cos^{2}(x)} \Bigg) = 
+2 tan(x) sec^{2}(x)$, $\implies f''(x) = 
+2 tan(x) sec^{2}(x)$
+
+The proposed steps are based on the principle of the \textbf{Product rule} (and shall be used in the consecutive section) which states:
+\[
+f'(x) = P(x) Q(x) = P'(x) Q(x) + Q'(x) P(x).
+\]
+
+\section{The third derivative of the tangent function}
+Differentiate $f(x)$ with the respect to $x$, such that $f'''(x)$: \\
+
+$f'''(x) = \big[ 2 tan(x) sec^{2}(x) \big]' = 
+2 \big[tan(x) sec^{2}(x) \big]' = 
+2 \big[[tan(x)]'sec^{2}(x) + [sec^{2}(x)]'tan(x) \big] =$
+
+$2 \big[ sec^4(x) + 2 tan^{2}(x) sec^{2}(x) \big] =
+2 \Big[ sec^{2}(x) \big[ sec^{2}(x) + 2 tan^{2}(x) \big] \Big] = 
+2 sec^{2}(x) \big[ sec^{2}(x) + 2 tan^{2}(x) \big]$, $\implies f'''(x) = 2 sec^{2}(x) \big[ sec^{2}(x) + 2 tan^{2}(x) \big]$
+
+\end{document}
