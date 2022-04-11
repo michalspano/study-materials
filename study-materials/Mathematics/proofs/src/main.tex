@@ -5,6 +5,8 @@
 \usepackage{amssymb}
 \usepackage{mathtools}
 \usepackage{gensymb}
+\usepackage{amsmath}
+\usepackage{MnSymbol}
 
 \title{\textbf{Mathematical proofs}}
 \author{Michal Špano}
@@ -39,12 +41,29 @@ The expression can be further simplified to the following form:
 % End of the proof
 $$\Phi = \cfrac{(n-2) \pi}{n}$$.
 
-
 % Include a picture of a unit circle
 \begin{figure}[htp]
     \centering
     \includegraphics[width=4.cm]{polygon_export.png}
     \caption{$n-sided$ polygon with its 4 vertices in a plane}
 \end{figure}
+
+\newpage
+
+\section{The number of diagonals of an $n-sided$ convex regular polygon}
+
+% Steps of the proof
+Suppose a geometrical locus of $n$ points on the plane, 
+i.e. a set of points $A_1, A_2, ..., A_n$ 
+such that $A_1, A_2, ..., A_n$ create an $n-sided$ convex regular polygon.
+The number of different abscissas in the geometrical locus is ${n \choose 2}$ 
+and denoted as $N_a$. It implies that no abscissa in the locus is given by more than two points, 
+i.e. each point is unique. Likewise, $\overlinesegment{A_1A_2} \equiv \overlinesegment{A_2A_1}$ 
+holds for any 2 points in the locus, thus such abscissas are counted as one. It can be inferred 
+that the number of diagonals, denoted as $N_D$, is the same as \textit{the difference of the number of 
+abscissas and the number of sides}: 
+
+% End of the proof
+$$N_D = N_s - n$$
 
 \end{document}
