@@ -9,6 +9,7 @@
 *.log
 *.synctex.gz
 *.toc
+*.out
 
 # Exclude VsCode
 .vscode
