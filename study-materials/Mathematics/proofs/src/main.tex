@@ -7,6 +7,7 @@
 \usepackage{gensymb}
 \usepackage{amsmath}
 \usepackage{MnSymbol}
+\usepackage{pgfplots}
 
 \title{\textbf{Mathematical proofs}}
 \author{Michal Špano}
@@ -105,12 +106,12 @@ $c = \cfrac{P}{P'}$. \\
 Similar methodology is applied to the similarity coefficient of the areas of the triangles:
 
 % Steps of computation - area
-Let $
-A = \dfrac{\overlinesegment{AB} \times \overlinesegment{H_{AB}}}{2} \land 
+Let $A = \dfrac{\overlinesegment{AB} \times \overlinesegment{H_{AB}}}{2} \land 
 A' = \dfrac{\overlinesegment{A'B'} \times \overlinesegment{H'_{AB}}}{2}$,
 where $H_{AB}$ and $H'_{AB}$ are the heights of the triangles. Thus,
 $A = \dfrac{c \times \overlinesegment{A'B'} c \times \overlinesegment{H'_{AB}}}{2} = 
-c^2 \times \Bigg( \dfrac{\overlinesegment{A'B'} \times \overlinesegment{H'_{AB}}}{2} \Bigg) = c^2 \times A'$
+c^2 \times \Bigg( \dfrac{\overlinesegment{A'B'} 
+\times \overlinesegment{H'_{AB}}}{2} \Bigg) = c^2 \times A'$
 
 $$A = c^2 \times A'$$
 
@@ -124,6 +125,38 @@ of the volume of the tetrahedron. Moreover, it is also applicable to derive the 
 of any planar polygon or solid figure (a scalene triangle per the given example is just an exemplary instance). 
 Still, the following holds: $P = c \times P' \land A = c^2 \times A' \land V = c^3 \times V'$ 
 based on the principles of \textbf{congruence}.
+
+% End of the proof
+
+\section{Function bounded above and/or below}
+
+% Start of the proof - bounded above and/or below function
+
+Suppose a function $f$ which has a finite domain, say $D_f$. A function is bounded above if: 
+$\exists! a \in \mathbb{R}, \forall x \in D_f \subset \mathbb{R}: f(x) \leq a$. That is to say,
+that every function value is smaller or equal to some constant, say $a$. Similarly, a function
+is bounded below if: $\exists! b \in \mathbb{R}, \forall x \in D_f \subset \mathbb{R}: f(x) 
+\geq b$. That implies, that every function value is greater or equal to some constant, say $b$.
+Lastly, a function is bounded if both of the previous statements hold, i.e.:
+$\exists! a \in \mathbb{R}, \exists! b \in \mathbb{R}, \forall x \in D_f \subset \mathbb{R}:
+f(x) \leq a \land f(x) \geq b$. Hence, some bounded function $f$ has the following range of 
+values: $[b;a]$, where $\{a,b\} \in \mathbb{R}$. For example, the function $f(x) = sin(x)$ 
+is bounded, such that $[-1;1]$ is its range of values. \\
+
+% Sample sin(x) plot
+\begin{figure}[htp]
+    \begin{center}  % Center the image
+        \begin{tikzpicture}
+            \begin{axis}[domain=0:2*pi,samples=100,smooth,xlabel={$x$},ylabel={$f(x)$}]
+                \addplot[color=blue] {sin(deg(x))};  % sine function
+                \addplot[color=black] {0};  % vertical line y = 0
+            \end{axis}
+        \end{tikzpicture}
+    \end{center}
+
+    % Caption the figure
+    \caption{$sin(x)$, where $x \in [0;2 pi]$}
+\end{figure}
 
 % End of the proof
 
