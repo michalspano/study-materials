@@ -155,9 +155,66 @@ is bounded, such that $[-1;1]$ is its range of values. \\
     \end{center}
 
     % Caption the figure
-    \caption{$sin(x)$, where $x \in [0;2 pi]$}
+    \caption{$sin(x)$, where $x \in [0;2 \pi]$}
 \end{figure}
 
+% End of the proof
+
+\newpage
+
+\section{The standard rules of logarithms}
+
+% Start of the proof - standard rules of logarithms
+
+The following rules of logarithms hold for $x,y,a,s$, such that:
+
+% Variable enumeration
+\[\forall x,y \in\mathbb{R^+}, \forall a > 0 \land a \neq 1, \forall s \in\mathbb{R}\]
+
+\begin{enumerate}
+    \item{$\boldsymbol{\log_a 1 = 0}$}  % Rule number 1
+
+    For any $a$ holds the following $a^0 = 1$. Therefore $log_a 1 = 0$.
+    
+    \item{$\boldsymbol{\log_a a = 1}$}  % Rule number 2
+
+    For any $a$ holds the following $a^1 = a$. Therefore $log_a a = 1$.
+
+    \item{$\boldsymbol{a^{\log_a x} = x}$}  % Rule number 3
+
+    Let $l = \log_a x$. Therefore $a^{l} = x$. Combining the two rules, we obtain the following:
+    $a^{\log_a x} = x$.
+
+    \item{$\boldsymbol{\log_a (x \times y) = \log_a x + \log_a y}$}  % Rule number 4
+    
+    Suppose some $x,y$, where $x = a^{\log_a x}$, $y = a^{\log_a y}$. If we compute the product
+    of them, we obtain that $x \times y = a^{\log_a x} \times a^{\log_a y}$. Furthermore, we 
+    have that $a^{\log_a x + \log_a y} = x \times y$. According to the previous rule, we 
+    obtain that $\log_a (x \times y) = \log_a x + \log_a y$.
+
+    \item{$\boldsymbol{\log_a \Big( \frac{x}{y} \Big) = \log_a x - \log_a y}$}  % Rule number 5
+    
+    Similarly, suppose some $x,y$, where $x = a^{\log_a x}$, $y = a^{\log_a y}$. If we compute 
+    the quotient of them, we obtain that $\cfrac{x}{y} = \cfrac{a^{\log_a x}}{a^{\log_a y}}$. 
+    Furthermore,  we obtain that $a^{\log_a x - \log_a y} = \cfrac{x}{y}$. According to the third 
+    rule, we have that $\log_a \big(\frac{x}{y}\big) = \log_a x - \log_a y$.
+
+    \item{$\boldsymbol{\log_a x^{s} = s \times \log_a x}$}  % Rule number 6
+
+    Suppose some $x$, where $x = a^{\log_a x}$. Power both sides of the equation by $s$, we 
+    obtain that $x^{s} = (a^{\log_a x})^{s}$. Therefore $a^{s \times \log_a x} = x^{s}$.
+    Having applied the third rule, it can be inferred that $\log_a x^{s} = s \times \log_a x$.
+
+    \item{$\boldsymbol{\log_a x = \dfrac{\log_b x}{\log_b a}}$}  % Rule number 7
+
+    Suppose some $x$, where $x = a^{\log_a x}$. Then, for some $\log$ with the base $b$ and the 
+    argument $x$ holds $\log_b x = \log_b a^{\log_a x}$. Applying the sixth rule, we obtain that
+    $\log_b x = \log_b a \times \log_a x$. Divide the equation by $\log_b a$, thus obtaining
+    $\log_a x = \cfrac{\log_b x}{\log_b a}$.
+
+
+\end{enumerate}
+    
 % End of the proof
 
 \end{document}
