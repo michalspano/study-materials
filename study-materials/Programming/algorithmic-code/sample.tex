@@ -1,0 +1,41 @@
+% Sample of typesetting algorithmic code in LaTeX
+% Great option for writing pseudocode.
+% Adopted from: https://tex.stackexchange.com/a/56877
+%
+
+\documentclass{article}[journal]
+\usepackage{algorithm}      % http://ctan.org/pkg/algorithm
+\usepackage{algpseudocode}  % http://ctan.org/pkg/algorithmicx
+
+\begin{document}
+
+\section*{Typesetting \texttt{algorithmic code} in \LaTeX} % Heading
+
+\begin{algorithm}  % Begin algorithmic code
+  \caption{Euclid’s algorithm}\label{euclid}  % Label the code
+  \begin{algorithmic}[1]  % Begin algorithmic code, layer 1
+
+    % Declare the beginning of the procedure
+    \Procedure{Euclid}{$a,b$} \Comment{The g.c.d. of a and b}  
+      \State $r\gets a\bmod b$
+
+      \While{$r\not=0$} \Comment{We have the answer if r is 0}  % Declare a while loop 
+        \State $a\gets b$
+        \State $b\gets r$
+        \State $r\gets a\bmod b$
+      \EndWhile\label{euclidendwhile}  % End the while loop
+
+      \For{\texttt{<condition>}}  % Declare a for loop
+        \State \texttt{<do something>}
+      \EndFor  % End the for loop
+
+      \State \textbf{return} $b$ \Comment{The gcd is b}
+    
+    \EndProcedure  % End the procedure
+
+  \end{algorithmic}
+\end{algorithm}
+
+\end{document}
+
+% EOF
