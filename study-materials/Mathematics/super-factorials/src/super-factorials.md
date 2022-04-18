@@ -4,10 +4,10 @@ ___
 0. **Standard** factorial
 
 Suppose $n!$ that implies: 
-$$n!=n \times (n-1)! \times (n-2)! \dots 2! \times 1!$$
+$$n!=n \times (n-1) \times (n-2) \dots 2 \times 1$$
 
 More generally: 
-$$n!=\prod_{k=0}^{n} (n-k)$$
+$$n!=\prod_{k=1}^{n} n$$
 
 1. **Double** factorial
 
@@ -24,8 +24,8 @@ Similarly expressed as:
 
 $$n!!=
 \begin{dcases}
- \prod_{k=0}^{n} (n -2 \times k) | even \\
- \prod_{k=0}^{n} (n -2 \times k) | odd \\
+ \prod_{k=1}^{\cfrac{n}{2}} (2 \times k) | even \\
+ \prod_{k=1}^{\cfrac{n+1}{2}} (2 \times k - 1) | odd \\
 \end{dcases}
 $$
 
@@ -39,6 +39,8 @@ The following holds: $$!n = n! \times \big( 1-\frac{1}{1!}+\frac{1}{2!} \times \
 
 Suppose a **primorial** of $n$, denoted as $n\#$, which express the series of prime numbers $p$:
 $$n\# = \prod_{p \leq n} p$$
+
+<br> %%PDF export truncation%%
 
 4. **Super** factorial (the _Sloane_ definition)
 
