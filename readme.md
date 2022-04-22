@@ -1,8 +1,13 @@
-# Programming & Mathematics Study Materials
+# Study materials for Mathematics and Programming
 
-<!-- TODO: Add proper readme.md -->
+This repositery contains a collection of study materials for __Mathematics__, __Programming__ and much more! Written by [@michalspano](https://github.com/michalspano).
 
-This repositery contains a collection of study materials for __Mathematics__, __Programming__ and much more!
-___
+## Contents 
 
-![demo](https://miro.medium.com/max/1400/1*7AKb9rynbkiMVV6pReqW2g.png)
+1. [Mathematics](https://github.com/michalspano/study-materials/tree/main/study-materials/Mathematics) 
+2. [Programming](https://github.com/michalspano/study-materials/tree/main/study-materials/Programming) 
+
+Licensed under [__MIT License__](https://github.com/michalspano/study-materials/blob/main/LICENSE).
+
+<!-- Stylised photo with html syntax -->
+<p style="text-align:center;"><img src="https://github.com/michalspano/study-materials/blob/main/LICENSE" style="width: 400px; height: auto;"></p>
