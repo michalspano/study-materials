@@ -7,8 +7,8 @@ This repositery contains a collection of study materials for __Mathematics__, __
 1. [Mathematics](https://github.com/michalspano/study-materials/tree/main/study-materials/Mathematics) 
 2. [Programming](https://github.com/michalspano/study-materials/tree/main/study-materials/Programming) 
 
-Licensed under [__MIT License__](https://github.com/michalspano/study-materials/blob/main/LICENSE).
-
-<br><br>
+<br>
 <!-- Stylised photo with html syntax -->
-<p style="text-align:center;"><img src="https://miro.medium.com/max/1400/1*7AKb9rynbkiMVV6pReqW2g.png" style="width: 82%; height: auto;"></p>
+<p style="text-align:center;"><img src="https://miro.medium.com/max/1400/1*7AKb9rynbkiMVV6pReqW2g.png" style="width: 82%; height: auto;"></p><br>
+
+<p style="text-align: center;">Licensed under <a href="https://github.com/michalspano/study-materials/blob/main/LICENSE"><b>MIT License</b></a></p>
