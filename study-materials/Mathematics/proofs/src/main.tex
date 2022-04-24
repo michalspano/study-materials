@@ -17,7 +17,7 @@
 
 \maketitle
 
-\section{The inner angle of an $n-sided$ convex regular polygon}
+\section*{The inner angle of an $n-sided$ convex regular polygon}
 
 % Introduction
 Suppose an $n-sided$ convex regular polygon. Its 4 consecutive vertices are shown in the figures, $N_1, N_2, N_3, ..., N_i$ respectively. 
@@ -51,7 +51,7 @@ $$\Phi = \cfrac{(n-2) \pi}{n}$$.
 
 \newpage
 
-\section{The number of diagonals of an $n-sided$ convex regular polygon}
+\section*{The number of diagonals of an $n-sided$ convex regular polygon}
 
 Suppose a geometrical locus of $n$ points on the plane, 
 % Steps of the proof
@@ -67,7 +67,7 @@ abscissas and the number of sides}:
 % End of the proof
 $$N_D = N_s - n$$
 
-\section{The similarity coefficient}
+\section*{The similarity coefficient}
 
 % Start of the proof
 Suppose a scalene triangle $\Delta_{ABC}$. We assume that there exists a triangle $\Delta_{A'B'C'}$,
@@ -128,7 +128,7 @@ based on the principles of \textbf{congruence}.
 
 % End of the proof
 
-\section{Function bounded above and/or below}
+\section*{Function bounded above and/or below}
 
 % Start of the proof - bounded above and/or below function
 
@@ -162,7 +162,7 @@ is bounded, such that $[-1;1]$ is its range of values. \\
 
 \newpage
 
-\section{The standard rules of logarithms}
+\section*{The standard rules of logarithms}
 
 % Start of the proof - standard rules of logarithms
 
@@ -212,9 +212,62 @@ The following rules of logarithms hold for $x,y,a,s$, such that:
     $\log_b x = \log_b a \times \log_a x$. Divide the equation by $\log_b a$, thus obtaining
     $\log_a x = \cfrac{\log_b x}{\log_b a}$.
 
-
 \end{enumerate}
     
+% End of the pr
+
+\newpage
+
+% Start of the proof - sum of n terms of an arithmetic sequence
+\section*{The sum of $n$ terms of an arithmetic sequence}
+
+Suppose an arithmetic sequence (also called a progression or a series) $\{a_{n}\}_{n=1}^{\infty}$. That is, a sequence of $n$ terms, where:
+$$\exists! d \in \mathbb{R} - \{0\}, \forall i,j \in \mathbb{N}: d = a_{i} - a_{j} \land i - j = 1$$ 
+
+That implies, that there exists exactly one constant, say $d$, such that the difference between every 2
+consecutive terms is $d$. We label the sum of the first $n$ terms of the sequence as $S_{n}=\sum_{i=1}^n a_{i}$.
+More explicitly, we have $S_{n} = a_{1} + a_{2} + \dots + a_{n-1} + a_{n}$. Similarly, if we reverse the 
+sequence, we obtain $S_{n} = a_{n} + a_{n-1} + \dots + a_{2} + a_{1}$. Add the two sums, we obtain:
+
+$$2 \times S_{n} = (a_{1} + a_{n}) + (a_{2} + a_{n-1}) + \dots + (a_{n-1} + a_{2}) + (a_{n} + a_{1})$$
+
+Observe the similarity between the sums. E. g.
+$(1 + 4) + (2 + 3) + \dots + (n + k) = (k + n) + \dots + (3 + 2) + (4 + 1)$
+Thus, it can be infered that $2 \times S_{n} = n \times (a_{n} + a_{1})$.
+Lastly, we have that: $$S_{n} = \cfrac{n \times (a_{n} + a_{1})}{2}$$
+
+\textbf{Conclusion:} The sum of $n$ terms of an arithmetic sequence is $\dfrac{n}{2} (a_{n} + a_{1})$.
+
+% End of the proof
+
+% Start of the proof - sum of n terms of an arithemtic sequence by mathematical induction
+
+\section*{The sum of $n$ terms of an arithmetic sequence (proof)}
+
+Suppose you are given a simple arithmetic sequence, where the difference between every 2 consecutive terms 
+$d$ is 1. We assume the following (using the notation from the previous section): 
+$$S_{n} = 1 + 2 + \dots + (n - 1) + n = \sum_{i=1}^{n} i = \frac{n}{2} (n + 1)$$
+
+Formulate a statement, say $S(n)$, which is to be proven.
+
+$$S(n): \forall n \in \mathbb{N}: 1 + 2 + \dots + n = \frac{n}{2} (n + 1)$$
+
+First and foremost, we let $n=1$: $S(1): 1 = \frac{1}{2} (1 + 1)$. That is true. \linebreak  % Step 1
+Secondly, assume that $S(k)$ holds for some arbitrary $k \in \mathbb{N}$.  % Step 2
+That is our \textbf{induction hypothesis} (also called the induction assumption). We obtain:
+$$S(k): 1 + 2 + \dots + k = \frac{k}{2} (k + 1)$$
+
+Thirdly, $S(k) \implies S(k^{+})$, so we let $n=k+1$. Steps of the proof:  % Step 3
+
+$$S(k + 1): 1 + 2 + \dots + k + (k + 1) = \cfrac{(k+1)(k+2)}{2}$$  % Steps of the proof
+$$S(k + 1): S(k) + (k + 1) = \cfrac{(k+1)(k+2)}{2}$$
+$$S(k + 1): \frac{k}{2} (k + 1) + (k + 1) = \cfrac{(k+1)(k+2)}{2}$$
+$$S(k + 1): \cfrac{k(k+1) + 2(k+1)}{2} = \cfrac{(k+1)(k+2)}{2}$$
+$$S(k + 1): \cfrac{(k+1)(k+2)}{2} = \cfrac{(k+1)(k+2)}{2}$$
+
+We obtain that $S(k+1)$ holds and so must $S(k)$ (our induction hypothesis). That suffices to prove $S(n)$.
+Finally, we have that $S(n)$ holds for all $n \in \mathbb{N}$, and thus \textbf{the proof is complete}.  % Step 4
+
 % End of the proof
 
 \end{document}
