@@ -1,3 +1,15 @@
+---
+title: IB Questionnaire
+author: Michal Š.
+date: 2022-02-14
+papersize: a4
+fontsize: 10pt
+colorlinks: true
+pdf_document: null
+geometry: margin=1cm
+output: pdf_document
+---
+
 # IB Questionnaire - Computer Science 
 ### Assessed by: Michal Špano
 ### Collection of frequently asked questions of the IB programme in Computer Science
@@ -71,19 +83,19 @@ For instance, consider the following case of the `C` programming language, a low
 
 ___
 
-### Define the operators =, ≠, <=, >, >=, mod, div
+### Computer operations
 In __Computer Science__, jus like in __mathematics__, the operators are used to compare values. The following table lists the operators and their meanings:
 
-| Operator | Meaning |
-| -------- | ------- |
-| `=`   | equal to |
-| `≠`   | not equal to |
-| `≤`   | less than or equal to |
-| `<`   | less than |
-| `>`   | greater than |
-| `≥`   | greater than or equal to |
-| `mod` | modulo operand|
-| `div` | division |
+| Operator | Meaning                  |
+|----------|--------------------------|
+| $=$      | equal to                 |
+| $\neq$   | not equal to             |
+| $\leq$   | less than or equal to    |
+| $<$      | less than                |
+| $>$      | greater than             |
+| $\geq$   | greater than or equal to |
+| $\div$   | division                 |
+| $mod$    | modulo operator          |
 
 
 *Notes:* The `mod` operator is used to find the __remainder__ of a division. The `div` operator is used to find the __quotient__ of a division.
@@ -241,22 +253,22 @@ ___
 
 Different types of __networks__ (with their respective _abbreviations_) include:
 
-| Abbreviation | Network |
-| ----------- | ------ |
-| PAN | Personal Area Network |
-| LAN | Local Area Network |
-| WAN | Wide Area Network |
-| WLAN | Wireless Local Area Network |
-| CAN | Campus Area Network |
-| MAN | Metropolitan Area Network |
-| SAN | System Area Network |
-| EPN | Enterprise Private Network |
-| VPN | Virtual Private Network |
-| HAN | Home Area Network |
+| Abbreviation | Network                     |
+|--------------|-----------------------------|
+| PAN          | Personal Area Network       |
+| LAN          | Local Area Network          |
+| WAN          | Wide Area Network           |
+| WLAN         | Wireless Local Area Network |
+| CAN          | Campus Area Network         |
+| MAN          | Metropolitan Area Network   |
+| SAN          | System Area Network         |
+| EPN          | Enterprise Private Network  |
+| VPN          | Virtual Private Network     |
+| HAN          | Home Area Network           |
 
 A very common application of `WLAN` is `Wi-Fi`:
 
-![demo](https://media.geeksforgeeks.org/wp-content/uploads/20210501214003/Screenshot210.png)
+![Types of networks](https://media.geeksforgeeks.org/wp-content/uploads/20210501214003/Screenshot210.png)
 
 ___
 
@@ -324,7 +336,7 @@ The most common examples of __guided media__ are:
 
 The most common examples of __unguided media__ are:
 
-1. Radiowaves
+1. Radio waves
 2. Microwaves
 3. Infrared
 4. Bluetooth
