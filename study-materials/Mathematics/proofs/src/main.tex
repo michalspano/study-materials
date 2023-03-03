@@ -8,45 +8,55 @@
 \usepackage{amsmath}
 \usepackage{MnSymbol}
 \usepackage{pgfplots}
+\usepackage{lineno}
 
 \title{\textbf{Mathematical proofs}}
-\author{Michal Špano}
-\date{March 2022}
+\author{Michal Spano}
+\date{March 2022 - \textit{present}}
 
 \begin{document}
 
 \maketitle
 
-\section*{The inner angle of an $n-sided$ convex regular polygon}
+\section*{The inner angle of an \textit{n-sided} convex regular polygon}
 
 % Introduction
-Suppose an $n-sided$ convex regular polygon. Its 4 consecutive vertices are shown in the figures, $N_1, N_2, N_3, ..., N_i$ respectively. 
-Thus $\Delta_{N_1,N_2,S} \cong \Delta_{N_2,N_3,S}$, i.e. such $n-sided$ polygon consists of $n$ congruent isosceles triangles. 
-That is, $|\measuredangle N_2 N_1 S| = |\measuredangle N_1 N_2 S| \Rightarrow |\measuredangle N_1 N_2 S| = |\measuredangle S N_2 N_3|$, denoted as $\beta, \beta'$ respectively. 
+Suppose an $n-sided$ convex regular polygon. Its 4 consecutive vertices are shown in the figures, $N_1, N_2, N_3, ..., N_i$ respectively.
+Thus $\Delta_{N_1,N_2,S} \cong \Delta_{N_2,N_3,S}$, i.e. such $n-sided$ polygon consists of $n$ congruent isosceles triangles.
+That is, $|\measuredangle N_2 N_1 S| = |\measuredangle N_1 N_2 S| \Rightarrow |\measuredangle N_1 N_2 S| = |\measuredangle S N_2 N_3|$,
+denoted as $\beta, \beta'$ respectively.
 
 % Section I
-An angle $\alpha = |\measuredangle N_1 S N_2| = \cfrac{360}{n}$, since such an angle multiplied by $n$ makes for a perfect circle of $360\degree$. Likewise $\alpha = 180\degree - 2 \beta$.
+An angle $\alpha = |\measuredangle N_1 S N_2| = \cfrac{360}{n}$, since such an angle multiplied by $n$ makes for a perfect circle of $360\degree$. 
+Likewise $\alpha = 180\degree - 2 \beta$.
 
-% Section I
-Let $\Phi$ be an inner angle of the polygon, such that $\phi = 2 \beta$ (shown in the figure at the vertex $N_2$).
+% Section II
+Let $\phi$ be an inner angle of the polygon, such that $\phi = 2 \beta$ (shown in the figure at the vertex $N_2$).
 
-% Steps of computations
-Express in terms of $\beta$: $\alpha = 180 - 2 \beta \iff \beta = \cfrac{-\alpha + 180}{2}$
+% Steps of the proof
+Given $\alpha$, let us re-arrange the expression in terms of $\beta$:
 
-Substitute $\alpha$ for $\alpha = \cfrac{360}{n}$: $\beta = \cfrac{-\cfrac{360}{n} + 180}{2} \iff \beta = \cfrac{180n - 360}{2n}$
+$$\alpha = 180 - 2 \beta \iff \beta = \cfrac{-\alpha + 180}{2}$$
 
-Express in terms of $\Phi$: $\Phi = 2 \beta = 2 \Big( \cfrac{180n - 360}{2n} \Big) = \cfrac{180n - 360}{n}$ \\
+Knowing the properties of $\alpha$, we substitute $\alpha$ for $\alpha = {360}/n$ and obtain:
 
-The expression can be further simplified to the following form:
+$$\beta = \cfrac{-\cfrac{360}{n} + 180}{2} \iff \beta = \cfrac{180n - 360}{2n}$$
+
+Knowing the definition of the inner angle of the polygon, namely $\phi = 2 \beta$, we have that:
+$$\phi = 2 \beta = 2 \ast \Bigg( \cfrac{180n - 360}{2n} \Bigg) = \cfrac{180n - 360}{n}$$
+
+The obtained expression can be further simplified to the following:
 
 % End of the proof
-$$\Phi = \cfrac{(n-2) \pi}{n}$$.
+$$\phi = \cfrac{(n-2) \pi}{n}$$
+
+$\therefore$ the inner angle of an \textit{n-sided} convex regular polygon is ${(n-2) \ast \pi}n^{-1}$. $\blacksquare$
 
 % Include a picture of a unit circle
 \begin{figure}[htp]
     \centering
-    \includegraphics[width=4.cm]{polygon_export.png}
-    \caption{$n-sided$ polygon with its 4 vertices in a plane}
+    \includegraphics[width=3.cm]{polygon_export.png}
+    \caption{\textit{n-sided} polygon with its 4 vertices in a plane}
 \end{figure}
 
 \newpage
@@ -80,7 +90,7 @@ $\exists! c \in \mathbb{Q}: |V_1 V_2| = c \times |V_1' V_2'| \land c \gneqq 1$, 
 are the vertices of the original triangle.
 
 % Section 1 - perimeters
-Then, it can be easily inferred, that for the \textbf{perimeters} of the triangles 
+Then, it can be easily inferred, that for the \textbf{perimeters} of the triangles
 holds the following: Let $P = \overlinesegment{AB} + \overlinesegment{BC} + \overlinesegment{AC}$, similarly 
 $P' = \overlinesegment{A'B'} + \overlinesegment{B'C'} + \overlinesegment{A'C'}$. Likewise
 % Enumerating the similar sides with a constant
@@ -95,12 +105,12 @@ $P = c \times \overlinesegment{A'B'} + c \times \overlinesegment{B'C'} + c
 \times \overlinesegment{A'C'} \Rightarrow$
 $P = c \times \Big( \overlinesegment{A'B'} + \overlinesegment{B'C'} + \overlinesegment{A'C'} \Big) = c \times P'$
 
-$$P = c \times P'$$.
+$$\therefore P = c \times P'$$
 
 % Conclusion of section 1
-It implies that the ratio of the lengths of the sides of the similar triangles, 
+It implies that the ratio of the lengths of the sides of the similar triangles,
 i.e. the ratio of their perimeters, is equal to the similarity coefficient:
-$c = \cfrac{P}{P'}$. \\
+$c = {P}/{P'}$.
 
 % Section 2 - areas
 Similar methodology is applied to the similarity coefficient of the areas of the triangles:
@@ -113,11 +123,11 @@ $A = \dfrac{c \times \overlinesegment{A'B'} c \times \overlinesegment{H'_{AB}}}{
 c^2 \times \Bigg( \dfrac{\overlinesegment{A'B'} 
 \times \overlinesegment{H'_{AB}}}{2} \Bigg) = c^2 \times A'$
 
-$$A = c^2 \times A'$$
+$$\therefore A = c^2 \times A^{\prime}$$
 
 % Conclusion of section 2
-It implies, that the ratio of the areas equals to the similarity coefficient 
-taken to the second power: $c^2 = \cfrac{A}{A'}$. \\
+It implies, that the ratio of the areas equals to the similarity coefficient
+taken to the second power: $c^2 = {A}/{A^{\prime}}$.
 
 % Conclusion
 To sum up, such a methodology is also applicable to derive the similarity coefficient 
@@ -132,7 +142,7 @@ based on the principles of \textbf{congruence}.
 
 % Start of the proof - bounded above and/or below function
 
-Suppose a function $f$ which has a finite domain, say $D_f$. A function is bounded above if: 
+Suppose a function $f$ which has a finite domain, say $D_f$. A function is bounded above if:
 $\exists! a \in \mathbb{R}, \forall x \in D_f \subset \mathbb{R}: f(x) \leq a$. That is to say,
 that every function value is smaller or equal to some constant, say $a$. Similarly, a function
 is bounded below if: $\exists! b \in \mathbb{R}, \forall x \in D_f \subset \mathbb{R}: f(x) 
@@ -233,14 +243,14 @@ $$2 \times S_{n} = (a_{1} + a_{n}) + (a_{2} + a_{n-1}) + \dots + (a_{n-1} + a_{2
 
 Observe the similarity between the sums. E. g.
 $(1 + 4) + (2 + 3) + \dots + (n + k) = (k + n) + \dots + (3 + 2) + (4 + 1)$
-Thus, it can be infered that $2 \times S_{n} = n \times (a_{n} + a_{1})$.
+Thus, it can be inferred that $2 \times S_{n} = n \times (a_{n} + a_{1})$.
 Lastly, we have that: $$S_{n} = \cfrac{n \times (a_{n} + a_{1})}{2}$$
 
 \textbf{Conclusion:} The sum of $n$ terms of an arithmetic sequence is $\dfrac{n}{2} (a_{n} + a_{1})$.
 
 % End of the proof
 
-% Start of the proof - sum of n terms of an arithemtic sequence by mathematical induction
+% Start of the proof - sum of n terms of an arithmetic sequence by mathematical induction
 
 \section*{The sum of $n$ terms of an arithmetic sequence (proof)}
 
@@ -266,8 +276,61 @@ $$S(k + 1): \cfrac{k(k+1) + 2(k+1)}{2} = \cfrac{(k+1)(k+2)}{2}$$
 $$S(k + 1): \cfrac{(k+1)(k+2)}{2} = \cfrac{(k+1)(k+2)}{2}$$
 
 We obtain that $S(k+1)$ holds and so must $S(k)$ (our induction hypothesis). That suffices to prove $S(n)$.
-Finally, we have that $S(n)$ holds for all $n \in \mathbb{N}$, and thus \textbf{the proof is complete}.  % Step 4
+Finally, we have that $S(n)$ holds for all $n \in \mathbb{N}$, and thus \textbf{the proof is complete}. $\blacksquare$ % Step 4
 
 % End of the proof
 
+\section*{Quantifiers in mathematical logic (1)} 
+
+\textbf{Task 1.} Show that $\neg \forall x [P(x)] \iff \exists [\neg P(x)]$.
+
+\textbf{Solution}: Let's write the definition of the universal quantifier, where $A$ is a set of some $n$ finite elements,
+namely, $\{a_{1}, a_{2}, \dots, a_{n}\}$: $\neg \forall x \in A: P(x) \iff \neg \big( P(a_{1}) \land P(a_{2}) \land \dots \land P(a_{n}) \big)$.
+If we apply the the De Morgan's law, we obtain $\neg \forall x \in A: P(x) \iff \neg P(a_{1}) \lor \neg P(a_{2}) \lor \dots \lor \neg P(a_{n})$.
+This simply states, that there's at least one element in the set $A$ for which the statement $P(x)$ is false. 
+We may factor the negation sign out of the sequence of predicates, thus obtaining $\neg \forall x \in A: P(x) \iff \neg \big( P(a_{1}) \lor P(a_{2}) \lor \dots \lor P(a_{n}) \big)$. 
+Were we to apply the definition of the existential quantifier, we receive that $\neg \forall x \in A: P(x) \iff \exists x \in A: \neg P(x)$,
+since $\exists x \in A: P(a_{1}) \lor P(a_{2}) \lor \dots \lor P(a_{n})$ which completes the proof - we've shown that the two mathematical expressions are equivalent. $\blacksquare$
+
+\textbf{Note}: the same analogy is used to show the negation of the existential quantifier. For brevity,
+it's left to the reader to prove it.
+
+% End of the first proof of the quantifiers
+
+\section*{Quantifiers in mathematical logic (2)}
+
+\textbf{Task 2.} Negate the following expression: $\forall x \exists y [P(x, y) \land Q(x)]$.
+
+\textbf{Solution}: the resulting expression is broken down into 4 consecutive steps. A brief description is
+adduced for each step. Observe the steps one by one until the resulting expression:
+
+\begin{linenomath*}
+    \begin{equation}
+        \neg \big( \forall x \exists y [P(x, y) \land Q(x)] \big)
+        \text{ - the initial expression is negated}
+    \end{equation} 
+    \begin{equation}
+        \exists x \neg \big( \exists y [P(x, y) \land Q(x)] \big)
+        \text{ - the outer quantifier is negated}
+    \end{equation}
+    \begin{equation}
+        \exists x \forall y \neg \big( [P(x, y) \land Q(x)] \big)
+        \text{ - the inner quantifier is negated}
+    \end{equation}
+    \begin{equation}
+        \exists x \forall y [\neg P(x, y) \lor \neg Q(x)]
+        \text{ - De Morgan's law} ^{\ast} \text{ is applied}
+    \end{equation}
+    \begin{equation}
+        \text{The resulting expression. } \blacksquare
+    \end{equation}
+    
+\end{linenomath*}
+
+$^{\ast}$In this case, it represents the negation of the conjunction, 
+namely: $\neg \big( A(x) \land B(x) \big) \equiv \neg A(x) \lor \neg B(x)$ 
+for some predicates $A$ and $B$ given $x$.
+
 \end{document}
+
+% End of the second proof of the quantifiers
